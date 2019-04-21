@@ -1,0 +1,15 @@
+import cv2
+image1 = cv2.imread('3.jpg',1)
+image2 = cv2.imread('4.jpg',1)
+m1 = cv2.addWeighted(image1,0.5 , image2, 0.5,0)
+m2 = cv2.addWeighted(image1,0.4 , image2,0.6,0 )
+m3 = cv2.addWeighted(image1,0.6 , image2,0.4,0 )
+cv2.imshow('0.5-0.5',m1)
+cv2.imshow('0.4-0.6',m2)
+cv2.imshow('0.6-0.4',m3)
+cv2.waitKey(0)
+cv2.distroyAllWindows()
+
+cv2.imwrite('0.5-0.5',m1)
+cv2.imwrite('0.4-0.6',m2)
+cv2.imwrite('0.6-0.4',m3)
